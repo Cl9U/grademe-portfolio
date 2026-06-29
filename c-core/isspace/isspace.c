@@ -1,4 +1,4 @@
-int	isspace(char c)
+int	gm_isspace(char c)
 {
 	if (!((c == ' ') || (c >= 9 && c <= 13)))
 		return (0);
