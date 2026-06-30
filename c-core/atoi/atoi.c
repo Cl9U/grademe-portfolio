@@ -1,4 +1,4 @@
-int atoi(const char *str)
+int gm_atoi(const char *str)
 {
 	int i = 0;
 	int s = 1;
