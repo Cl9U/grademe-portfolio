@@ -3,7 +3,7 @@
 Compare at most n characters of two strings
 
 ```c
-int strncmp(const char *s1, const char *s2, size_t n)
+int gm_strncmp(const char *s1, const char *s2, size_t n)
 ```
 
 **Difficulty:** 4/5
