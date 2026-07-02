@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char	*strstr(const char *haystack, const char *needle)
+char	*gm_strstr(const char *haystack, const char *needle)
 {
 	int i = 0;
 	int j;

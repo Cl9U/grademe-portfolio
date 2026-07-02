@@ -1,6 +1,6 @@
 #include <stddef.h>
 
-char	*strncpy(char *dst, const char *src, size_t n)
+char	*gm_strncpy(char *dst, const char *src, size_t n)
 {
 	size_t i = 0;
 	if(n == 0)

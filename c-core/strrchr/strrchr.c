@@ -1,5 +1,5 @@
 #include <stdio.h>
-char	*strrchr(const char *s, int c)
+char	*gm_strrchr(const char *s, int c)
 {
 	int i = 0;
 	while(s[i])

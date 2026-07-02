@@ -1,9 +1,9 @@
 # strncpy
 
-Copy at most n characters, NUL-padding the remainder
+Copy at most n characters, NUL\-padding the remainder
 
 ```c
-char *strncpy(char *dst, const char *src, size_t n)
+char *gm_strncpy(char *dst, const char *src, size_t n)
 ```
 
 **Difficulty:** 4/5

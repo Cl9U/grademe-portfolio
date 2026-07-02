@@ -3,7 +3,7 @@
 Fill the first n bytes of a memory area with a given byte
 
 ```c
-void *memset(void *s, int c, size_t n)
+void *gm_memset(void *s, int c, size_t n)
 ```
 
 **Difficulty:** 3/5

@@ -3,7 +3,7 @@
 Find the last occurrence of a character in a string
 
 ```c
-char *strrchr(const char *s, int c)
+char *gm_strrchr(const char *s, int c)
 ```
 
 **Difficulty:** 3/5
