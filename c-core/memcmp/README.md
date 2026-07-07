@@ -3,7 +3,7 @@
 Compare the first n bytes of two memory blocks
 
 ```c
-int memcmp(const void *s1, const void *s2, size_t n)
+int gm_memcmp(const void *s1, const void *s2, size_t n)
 ```
 
 **Difficulty:** 4/5
