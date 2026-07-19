@@ -1,40 +1,41 @@
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
 	int	i;
 	int	j;
+	int	k;
+	int	found;
+	int	dup;
 
-	if (argc != 3)
+	if (ac != 3)
 	{
 		write(1, "wrong number of arguments\n", 26);
 		return (0);
 	}
 	i = 0;
-	while (argv[2][i])
+	while (av[2][i])
 	{
+		found = 0;
 		j = 0;
-		while (j < i)
+		while (av[1][j])
 		{
-			if (argv[2][j] == argv[2][i])
-				break;
+			if (av[2][i] == av[1][j])
+				found = 1;
 			j++;
 		}
-		if (j == i)
+		dup = 0;
+		k = 0;
+		while (k < i)
 		{
-			j = 0;
-			while (argv[1][j])
-			{
-				if (argv[1][j] == argv[2][i])
-				{
-					write(1, &argv[2][i], 1);
-					break;
-				}
-				j++;
-			}
+			if (av[2][k] == av[2][i])
+				dup = 1;
+			k++;
 		}
+		if (found == 1 && dup == 0)
+			write(1, &av[2][i], 1);
 		i++;
 	}
-	write(1, "\n", 1);
+	write(1,"\n", 1);
 	return (0);
 }
