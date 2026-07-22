@@ -1,10 +1,13 @@
 #include <unistd.h>
+
 void print_digits(void)
 {
-char i = '0';
-while ( i <= '9')
-   {
-    write( 1, &i, 1);
-    i++;
-   }
+	char c;
+
+	c = '0';
+	while (c <= '9')
+	{
+		write(1, &c, 1);
+		c++;
+	}
 }
