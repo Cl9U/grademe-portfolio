@@ -1,40 +1,24 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
+int	main(int ac, char **av)
 {
-    write( 1, &c, 1);
-}
+	if (ac != 2)
+	{
+		write(1, "wrong number of arguments\n", 26);
+			return (0);
+	}
+	int i;
 
-int main(int argc,char** argv)
-{
-    int i;
-    int j;
-    char l[] = "abcdefghijklmnopqrstuvwxyz";
-    char u[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    if ( argc == 2)
-    {
-        i = 0;
-        while (argv[1][i])
-        {
-            j = 0;
-            while (l[j])
-            {
-                if ( argv[1][i] == l[j])
-                {
-                    argv[1][i] = l[(j + 1) % 26];
-                    break; 
-                }
-                if (argv[1][i] == u[j])
-                {
-                    argv[1][i] = u[(j + 1) % 26];
-                    break;
-                } 
-             j++;   
-            }
-            ft_putchar(argv[1][i]);
-         i++;   
-        }
-    }
-    ft_putchar('\n');
-    return (0);
+	i = 0;
+	while(av[1][i])
+	{
+		if (av[1][i] >= 'a' && av[1][i] <= 'z')
+			av[1][i] = (av[1][i] - 'a' + 1) % 26 + 'a';
+		if(av[1][i] >= 'A' && av[1][i]  <= 'Z')
+			av[1][i] = (av[1][i] - 'A' + 1) % 26 + 'A';
+		write(1, &av[1][i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
+	return (0);
 }
