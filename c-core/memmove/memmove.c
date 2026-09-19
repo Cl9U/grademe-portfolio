@@ -1,6 +1,6 @@
 #include <stddef.h>
 
-void	*memmove(void *dst, const void *src, size_t n)
+void	*gm_memmove(void *dst, const void *src, size_t n)
 {
 	if (n == 0)
 		return (dst);
